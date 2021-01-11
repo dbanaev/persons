@@ -14,7 +14,7 @@ class PDOAdapter
     private $errorLogger;
     private $sql;
 
-    public  function __construct($dsn, $username, $password, $errorLogger)
+    public  function __construct($dsn, $username, $password, LoggerInterface $errorLogger)
     {
         try {
             $this->dbh = new PDO($dsn, $username, $password);
